@@ -5,6 +5,8 @@ import * as Flex from "@twilio/flex-ui";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
+import * as FlexPlugin from "@twilio/flex-plugin";
+import OutboundSmsPlugin from "./OutboundSmsPlugin";
 
 const mountNode = document.getElementById("root");
 
@@ -14,6 +16,8 @@ window.onload = () => {
   const configuration = {
     ...predefinedConfig,
   };
+
+  FlexPlugin.loadPlugin(OutboundSmsPlugin);
 
   Flex
     .progress(mountNode)

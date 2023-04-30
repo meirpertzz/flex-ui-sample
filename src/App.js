@@ -10,8 +10,8 @@ class App extends React.Component {
     }
 
     return (
-      <Flex.ContextProvider manager={manager}>
-        <Flex.RootContainer />
+      <Flex.ContextProvider manager={manager} >
+        <Flex.RootContainer dir="rtl" />
       </Flex.ContextProvider>
     );
   }
